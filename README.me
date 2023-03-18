@@ -1,6 +1,23 @@
+/* Analisis Perbandingan dari Hasil solusi Program Algoritma Informed Search */
+
 # Informed Search
+- Greedy Best-First Search digunakan untuk pencarian jalur terpendek yang menggunakan heuristik dalam menentukan simpul mana yang harus dieksekusi lebih dulu. Heuristik   ini dapat berupa jarak euclidean, jarak Manhattan, dan heuristik lainnya yang dapat mengestimasi jarak ke simpul tujuan. Metode ini bekerja dengan mencari node yang     paling dekat dengan simpul tujuan terlebih dahulu.
 
-## Gready Best First Search
+- A* Search merupakan algoritma/metode pencarian jalur terpendek yang menggunakan pertimbangan kombinasi antara heuristik dan biaya aktual(actual cost) dari simpul-       simpul yang dilewati dan heuristik yang digunakan juga hampir sama dengan Greedy.
 
+Output yang dihasilkan dari program algoritma informed search, sebagai berikut :
+
+## Greedy Best First Search
+Hasil : Asal - Tujuan       : Magetan -> Surabaya
+          Kota yang dilewati  :['Magetan', 'Madiun', 'Nganjuk', 'Jombang', 'Surabaya']
+          Jarak               :  394
+          Time:  0.0012810230255126953
 
 ## A* Search
+Hasil : Asal - Tujuan       : Magetan -> Surabaya
+           Kota yang dilewati  : ['Magetan', 'Ngawi', 'Bojonegoro', 'Lamongan', 'Gresik', 'Surabaya']
+          Jarak               : 144		
+          Time:  0.0015609264373779297
+       
+Berdasarkan output yang dihasilkan, kita diperlihatkan bahwa metode A* Search lebih efisien dalam menemukan jarak/rute terpendek yang bisa dilalui dari Magetan menuju Surabaya walau untuk waktu eksekusinya ternyata algoritma Greedy Best First Search lebih cepat daripada A* Search. Perbedaan waktu eksekusi itu dikarenakan Greedy hanya bekerja dengan memperhitungkan nilai heuristik saja sedangkan pencarian A* Search lebih kompleks lagi yaitu heuristik dan actual cost.
+Secara keseluruhan, keduanya dapat digunakan untuk mencari jalur terpendek antara dua tempat. Namun, karena Jawa Timur memiliki wilayah yang cukup besar dan dengan berbagai jenis jalur dan rintangan, algoritma A* Search kemungkinan akan memberikan hasil yang lebih akurat dibandingkan dengan Greedy Best-First Search. Hal ini dikarenakan A* Search mempertimbangkan biaya aktual dari simpul-simpul yang dilewati sehingga akan memilih jalur yang memiliki biaya aktual yang lebih kecil dan cocok dengan heuristiknya. Hal itulah yang juga menyebabkan walaupun jumlah kota yang dilewati berdasarkan Greedy Best-First Search lebih sedikit daripada A* Search yaitu hanya melewati 5 kota sedangkan A* Search harus melewati 6 kota namun, jarak yang ditempuh ternyata lebih lama dari metode A*.
